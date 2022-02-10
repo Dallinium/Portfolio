@@ -34,7 +34,7 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #2ad4b5;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
@@ -94,10 +94,11 @@ body {
     }
 }
 
+
 // No JS styles
 .no-js {
-    #experience-timeline {
-        > div {
+    .cet {
+        >div {
             background: $background;
             padding: 10px;
             margin-bottom: 10px;
@@ -125,19 +126,21 @@ body {
             }
         }
 
-        &:before, &:after {
+        &:before,
+        &:after {
             content: none;
         }
     }
 }
 
 @keyframes dropHeader {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 header {
@@ -261,7 +264,7 @@ footer {
         height: 35px;
         border-radius: 50%;
         border: 3px solid lighten($text, 25%);
-        text-align:center;
+        text-align: center;
     }
 
     i {
@@ -315,11 +318,11 @@ footer {
 }
 
 .shadow {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .shadow-large {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .heading {
@@ -357,7 +360,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/roseclay-bg.jpeg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -371,7 +374,8 @@ footer {
     transform: translate(-50%, -50%);
     text-align: center;
 
-    h1, h2 {
+    h1,
+    h2 {
         margin: 0;
     }
 
@@ -422,13 +426,14 @@ footer {
         height: 35px;
         border-radius: 50%;
         border: 3px solid lighten($base-color, 25%);
-        text-align:center;
+        text-align: center;
     }
 
     i {
         animation: pulsate 1.5s ease;
         animation-iteration-count: infinite;
-        padding-top: 5px;;
+        padding-top: 5px;
+        ;
     }
 }
 
@@ -472,7 +477,8 @@ footer {
     --------------------------------
 */
 
-#experience {
+#experience,
+#certification {
     padding: 50px 15px;
     text-align: center;
     border-bottom: 1px solid $border;
@@ -482,7 +488,7 @@ footer {
     }
 }
 
-#experience-timeline {
+.cet {
     margin: 30px auto 0 auto;
     position: relative;
     max-width: 1000px;
@@ -600,6 +606,7 @@ footer {
     padding: 15px;
     border: 1px solid $border;
     text-align: left;
+    background: $background;
 
     h3 {
         font-weight: 500;
@@ -620,7 +627,8 @@ footer {
         margin: 0 0 15px 0;
     }
 
-    p, ul {
+    p,
+    ul {
         margin: 0;
         color: $text;
         font-size: 0.9em;
@@ -751,7 +759,8 @@ footer {
     max-width: 500px;
     margin: 0 auto;
 
-    input, textarea {
+    input,
+    textarea {
         display: block;
         width: 100%;
         padding: 10px;
@@ -761,6 +770,7 @@ footer {
         background: darken($base-color, 15%);
         color: #fff;
         @include transition();
+
         @include placeholder {
             color: #fff;
         }
@@ -785,11 +795,11 @@ footer {
         border: none;
         color: $base-color;
         font-weight: 700;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         @include transition();
 
         &:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
         }
     }
 }
@@ -831,7 +841,8 @@ footer {
         margin: 0 0 15px 0;
     }
 
-    p, ul {
+    p,
+    ul {
         margin: 0 0 15px 0;
         color: $text;
         font-size: 0.9em;
@@ -851,8 +862,10 @@ footer {
 // Collapse timeline
 @media only screen and (max-width: 750px) {
 
-    #experience-timeline {
-        &:before, &:after {
+    .cet {
+
+        &:before,
+        &:after {
             left: 23px;
         }
 
@@ -924,7 +937,8 @@ footer {
         height: 100%;
     }
 
-    #mobile-menu-open, #mobile-menu-close {
+    #mobile-menu-open,
+    #mobile-menu-close {
         display: block;
     }
 
@@ -960,7 +974,9 @@ footer {
     }
 
     .education-block {
-        h3, span {
+
+        h3,
+        span {
             float: none;
         }
     }

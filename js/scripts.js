@@ -23,12 +23,15 @@
         if ($(this).hasClass('no-scroll')) return;
 
         e.preventDefault();
+    //    set to go to link of clicked on section
         var heading = $(this).attr('href');
+        // set to go to top of that section
         var scrollDistance = $(heading).offset().top;
-
+        //perform animated scrolling by getting top-position of target-element minus 30px(to have on top of section or else will be right on top of section letters) and set it as scroll target
         $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
+            scrollTop: scrollDistance - "30"
+            // not sure why this line was added
+        }, Math.abs(window.pageYOffset - $(heading).offset().top) /1 );
 
         // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
